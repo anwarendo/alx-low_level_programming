@@ -1,8 +1,10 @@
 #include<stdio.h>
 
-/* Prints the text as it is */
+/**
+ * main - The main function
+ */
 int main(void)
 {
-  puts("\"Programming is like building a multilingual puzzle\n");
-  return 0;
+        puts("\"Programming is like building a multilingual puzzle");
+        return 0;
 }
