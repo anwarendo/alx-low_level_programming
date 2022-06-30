@@ -7,9 +7,8 @@
  */
 int main(void)
 {
-	char c;
-	long long n;
-	
+	char c = 'a';
+	long long n = 1000;
 	printf("Size of a char: %ld byte(s)\n", sizeof(c));
 	printf("Size of an int: %ld byte(s)\n", sizeof(int));
 	printf("Size of a long int: %ld byte(s)\n", sizeof(long));
