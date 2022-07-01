@@ -3,7 +3,10 @@
 #include <time.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - The main function 
+ * Return: 0 for success
+ */
 int main(void)
 {
 	int n;
