@@ -4,7 +4,7 @@
 /* more headers goes there */
 
 /**
- * main - The main function 
+ * main - The main function
  * Return: 0 for success
  */
 int main(void)
