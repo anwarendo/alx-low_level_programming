@@ -11,7 +11,7 @@ int main(void)
 
 	while (i < 60)
 	{
-		putchar(c[i++]);
+		putc(c[i++], stderr);
 	}
 	return (1);
 }
