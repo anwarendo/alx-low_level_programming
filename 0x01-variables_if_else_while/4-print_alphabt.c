@@ -13,11 +13,9 @@ int main(void)
 	nl = '\n';
 	while (c <= 'z')
 	{
-		//	putchar(c++);
-		if (c == 'e' || c == 'q')
+		if ((c == 'e') || (c == 'q'))
 		{
-			//	putchar('E');
-			continue;
+			c++;
 		}
 		putchar(c++);
 	}
