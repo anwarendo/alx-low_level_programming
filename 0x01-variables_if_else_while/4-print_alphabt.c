@@ -13,8 +13,12 @@ int main(void)
 	nl = '\n';
 	while (c <= 'z')
 	{
+		//	putchar(c++);
 		if (c == 'e' || c == 'q')
+		{
+			//	putchar('E');
 			continue;
+		}
 		putchar(c++);
 	}
 	putchar(nl);
