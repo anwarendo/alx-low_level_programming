@@ -6,8 +6,11 @@
  */
 int main(void)
 {
-	char c = 'a';
-	char n = '\n';
+	char c;
+	char n;
+
+	c = 'a';
+	n = '\n';
 	while (c <= 'z')
 	{
 		putchar(c++);
