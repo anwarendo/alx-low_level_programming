@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -Wall -S $CFILE -o $(echo $CFILE | tr ".c" ".s")
+gcc -masm=intel -S $CFILE -o $(echo $CFILE | tr ".c" ".s")
