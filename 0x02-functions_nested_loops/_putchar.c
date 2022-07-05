@@ -4,14 +4,7 @@
  * _putchar - Prints "_putchar"
  * Return: void
  */
-void _putchar(void)
+void _putchar(char c)
 {
-	char *s;
-	char i;
-	
-	s = "_putchar\n";
-	i = 0;
-	while (s[i] != '\n')
-		putchar(s[i++]);
-	putchar('\n');
+	putchar(c);
 }
