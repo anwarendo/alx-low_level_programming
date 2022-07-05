@@ -1,6 +1,5 @@
-#include <stdio.h>
-
-void _putchar(void);
+//#include <stdio.h>
+#include "main.h"
 
 /**
  * main - The entry function
