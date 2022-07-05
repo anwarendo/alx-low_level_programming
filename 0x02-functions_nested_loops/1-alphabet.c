@@ -1,8 +1,9 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
- * print_alphabet - prints alphabets a to z
- * Return: void (doesn't return anything)
+ * print_alphabet - Prints a to z
+ *
+ * Return: void
  */
 void print_alphabet(void)
 {
@@ -12,16 +13,6 @@ void print_alphabet(void)
 	c = 'a';
 	nl = '\n';
 	while (c <= 'z')
-		putchar(c++);
-	putchar(nl);
-}
-
-/**
- * main - The main function
- * Return: 0 for success
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
+		_putchar(c++);
+	_putchar(nl);
 }
