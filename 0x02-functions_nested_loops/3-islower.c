@@ -4,6 +4,7 @@
 /**
  * _islower - checs for the "case" of the character
  *
+ * @c: the character to be checked for it's "case"
  * Return: 1 for true or 0 for fasle
  */
 int _islower(int c)
