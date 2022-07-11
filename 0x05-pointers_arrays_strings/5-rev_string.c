@@ -11,7 +11,7 @@ void rev_string(char *s)
 	int i;
 	int j;
 	int len;
-	char a[50];
+	char a[1000];
 
 	j = 0;
 	for (i = strlen(s) - 1; i >= 0; i--)
