@@ -7,7 +7,7 @@
  * @s2: pointer for the second string
  * Return: integer less than, equal, or greater than zero
  */
-int _strcmp(char *s1 ,char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	return (strcmp(s1, s2));
 }
