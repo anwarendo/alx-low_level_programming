@@ -6,8 +6,10 @@
  * @argv: the argument vector or array of pointers for argument
  * Return: 0 for success
  */
-int main(int argc, __attribute__((unused)) char *argv[])
+int main(int argc, char *argv[])
 {
+	char **a __attribute__((unused)) = argv;
+
 	printf("%d\n", argc);
 	return (0);
 }
