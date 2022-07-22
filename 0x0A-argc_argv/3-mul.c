@@ -9,7 +9,7 @@
  * @y: the power number
  * Return: the result of x ** y
  */
-int _pow_recursion(int x, int y)
+int _pow(int x, int y)
 {
 	if (y < 0)
 		return (-1);
@@ -18,7 +18,7 @@ int _pow_recursion(int x, int y)
 	else
 	{
 		y--;
-		return (_pow_recursion(x, y) * x);
+		return (_pow(x, y) * x);
 	}
 }
 
@@ -30,6 +30,8 @@ int _pow_recursion(int x, int y)
  */
 int main(int argc, char *argv[])
 {
+	int signx = 1;
+	int signy = 1;
 	int i;
 	int x;
 	int y;
@@ -46,24 +48,34 @@ int main(int argc, char *argv[])
 	x = 0;
 	while (argv[1][i] != '\0')
 	{
+		if (i == 0 && argv[1][i] == '-')
+			signx = -1;
 		if (!isdigit(argv[1][i]))
 		{
 			printf("Error");
 			return (1);
 		}
+
 		i++;
 		xs++;
 	}
-
-	for (i = xs - 1; i >= 0; i--)
-		x += (toascii(argv[1][i]) - 48) * _pow_recursion(10, xs - 1 - i);
-
+	if (signx == 1)
+		for (i = 0; i < xs; i++)
+			x += (toascii(argv[1][i]) - 48) * _pow(10, xs - 1 - i);
+	else
+	{
+		for (i = 1; i < xs; i++)
+			x += (toascii(argv[1][i]) - 48) * _pow(10, xs - 1 - i);
+		x = signx * x;
+	}
 	i = 0;
 	ys = 0;
 	y = 0;
 	while (argv[2][i] != '\0')
         {
-         	if (!isdigit(argv[2][i]))
+		if (i == 0 && argv[2][i] == '-')
+			signy = -1;
+         	if (i > 0 && !isdigit(argv[2][i]))
                 {
                         printf("Error\n");
                         return (1);
@@ -72,8 +84,15 @@ int main(int argc, char *argv[])
 		ys++;
 	}
 
-        for (i = 0; i < ys; i++)
-		y += toascii(argv[2][i] - 48) * _pow_recursion(10, ys - 1 - i);
+	if (signy == -1)
+	{
+		for (i = 1; i < ys; i++)
+			y += toascii(argv[2][i] - 48) * _pow(10, ys - 1 - i);
+		y = signy * y;
+	}
+	else
+		for (i = 0; i < ys; i++)
+			y += toascii(argv[2][i] - 48) * _pow(10, ys - 1 - i);
 
 	printf("%d\n", x * y);
 	return (0);
