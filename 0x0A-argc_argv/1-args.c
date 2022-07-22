@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define UNUSED(argv) do { (void)(argv); } while (0)
 
 /**
  * main - the main function that prints the number of arguments
@@ -8,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	(void)argv;
+	UNUSED(argv);
 	printf("%d\n", argc);
 	return (0);
 }
