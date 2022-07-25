@@ -17,6 +17,14 @@ char *str_concat(char *s1, char *s2)
 	unsigned int j;
 	char *ptr;
 
+	if (s1 == NULL || s2 == NULL)
+	{
+		if (s1 == NULL)
+			s1[0] = '';
+		if (s2 == NULL)
+			s2[0] = '';
+	}
+
 	size1 = strlen(s1) * sizeof(char);
 	size2 = strlen(s2) * sizeof(char) + sizeof(char);
 	size = size1 + size2;
