@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 /**
  * _strdup - computes a newly allocated space
@@ -11,13 +13,14 @@ char *_strdup(char *str)
 	char *ptr;
 	unsigned int size;
 	unsigned int i;
-
+	size = 0;
 	if (str == NULL)
 	{
 		ptr = NULL;
 		return (ptr);
 	}
-	size = sizeof(str);
+
+	size = strlen(str) * sizeof(char);
 	ptr = malloc(size);
 	if (ptr)
 	{
