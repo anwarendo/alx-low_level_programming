@@ -7,6 +7,7 @@
  * argstostr - concatenates all the arguments
  * @ac: arguments count
  * @av: arguments vector
+ * Return: pointer for the concatenated str
  */
 char *argstostr(int ac, char **av)
 {
@@ -24,14 +25,17 @@ char *argstostr(int ac, char **av)
 	str = malloc(size * sizeof(char));
 	if (!str)
 		return (NULL);
-	for (i = 0; i < size; i++)
+	else
 	{
-		col = strlen(av[i]);
-		for (j = 0; j < col; j++)
+		for (i = 0; i < size; i++)
 		{
-		     str[i * col - 1 + j] = av[i][j];
-		     printf("%s\n", av[i]);
+			col = strlen(av[i]);
+			for (j = 0; j < col; j++)
+			{
+				str[i * col - 1 + j] = av[i][j];
+				printf("%s\n", av[i]);
+			}
 		}
+		return (str);
 	}
-	return (str);
 }
