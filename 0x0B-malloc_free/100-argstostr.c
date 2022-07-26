@@ -10,16 +10,23 @@
  */
 char *argstostr(int ac, char **av)
 {
-	unsigned int i;
-	unsigned int size;
+	int i;
+	int j;
+	int col;
+	int size;
 	char *str;
-	char str2[] = "hello there";
 
-	(void) ac;
-	(void) av;
-	size = 12;
-	str = malloc(12);
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	size = 0;
+	for (i = 0; i < ac; i++)
+		size += strlen(av[i]);
+	str = malloc(size * sizeof(char));
 	for (i = 0; i < size; i++)
-		str[i] = str2[i];
+	{
+		col = strlen(av[i]);
+		for (j = 0; j < col; j++)
+		     str[i * col + j] = av[i][j];
+	}
 	return (str);
 }
