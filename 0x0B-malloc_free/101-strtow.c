@@ -10,10 +10,7 @@ char **strtow(char *str)
 {
 
 	char **astr;
-/*	int size;
-	int col;
-	bool begin;
-*/
+
 	if (str == NULL)
 		return (NULL);
 
