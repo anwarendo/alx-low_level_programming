@@ -21,16 +21,16 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	size = 0;
 	for (i = 0; i < ac; i++)
-		size += strlen(av[i]);
+		size += strlen(av[i] + 1);
 	str = malloc(size * sizeof(char));
 	if (str)
 	{
-		for (i = 0; i < size; i++)
+		for (i = 0; i < ac; i++)
 		{
 			col = strlen(av[i]);
-			for (j = 0; j < col; j++)
+			for (j = 0; j <= col; j++)
 			{
-				str[i * col - 1 + j] = av[i][j];
+				str[i * col + j] = av[i][j];
 			}
 		}
 		return (str);
