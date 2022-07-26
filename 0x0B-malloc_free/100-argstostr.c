@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 		for (j = 0; j < col; j++)
 		{
 		     str[i * col - 1 + j] = av[i][j];
-		     printf("%s\n", av[i][j]);
+		     printf("%s\n", av[i]);
 		}
 	}
 	return (str);
