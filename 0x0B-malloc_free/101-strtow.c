@@ -16,5 +16,5 @@ char **strtow(char *str)
 
 	astr = malloc(3 * sizeof(str));
 	astr[0] = str;
-	return astr;
+	return (astr);
 }
