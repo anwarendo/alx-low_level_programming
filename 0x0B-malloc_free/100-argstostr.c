@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 	{
 		col = strlen(av[i]);
 		for (j = 0; j < col; j++)
-		     str[i * col + j] = av[i][j];
+		     str[i * col - 1 + j] = av[i][j];
 	}
 	return (str);
 }
