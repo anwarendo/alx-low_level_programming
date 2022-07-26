@@ -23,9 +23,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 		size += strlen(av[i]);
 	str = malloc(size * sizeof(char));
-	if (!str)
-		return (NULL);
-	else
+	if (str)
 	{
 		for (i = 0; i < size; i++)
 		{
@@ -33,9 +31,10 @@ char *argstostr(int ac, char **av)
 			for (j = 0; j < col; j++)
 			{
 				str[i * col - 1 + j] = av[i][j];
-				printf("%s\n", av[i]);
 			}
 		}
 		return (str);
 	}
+	else
+		return (NULL);
 }
