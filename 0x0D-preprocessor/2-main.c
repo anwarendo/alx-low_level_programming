@@ -1,5 +1,7 @@
-#include "name.h"
 #include <stdio.h>
+#ifndef NAME
+#define NAME(X) X
+#endif
 
 /**
  * main - the main function
