@@ -1,0 +1,14 @@
+#include "name.h"
+#include <stdio.h>
+
+/**
+ * main - the main function
+ * @argc: arguments count
+ * @argv: arguments vector
+ * Return: 0 for success
+ */
+int main(int argc, char *argv[])
+{
+	printf("%s\n", NAME(argv[0]));
+	return (0);
+}
