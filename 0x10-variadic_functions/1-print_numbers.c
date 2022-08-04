@@ -4,6 +4,7 @@
 
 /**
  * print_numbers - prints numbers
+ * @separator: pointer to the separator string
  * @n: number of the variable arguments (numbers)
  * Return: nothing
  */
