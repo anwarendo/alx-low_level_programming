@@ -2,3 +2,8 @@
 #define SUM_THEM_ALL
 int sum_them_all(const unsigned int n, ...);
 #endif /* sum_them_all */
+
+#ifndef PRINT_NUMBERS
+#define PRINT_NUMBERS
+void print_numbers(const char *separator, const unsigned int n, ...);
+#endif /* print_numbers */
