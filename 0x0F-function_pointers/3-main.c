@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	if (s[1] != '\0')
 	{
 		printf("Error\n");
-		exit(90);
+		exit(99);
 	}
 	if (*s != '+' && *s != '-' && s[0] != '*' && s[0] != '/' && s[0] != '%')
 	{
