@@ -19,6 +19,16 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	s = argv[2];
+	if (s[1] != '\0')
+	{
+		printf("Error\n");
+		exit(90);
+	}
+	if (*s != '+' && *s != '-' && s[0] != '*' && s[0] != '/' && s[0] != '%')
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	result = get_op_func(s)(a, b);
