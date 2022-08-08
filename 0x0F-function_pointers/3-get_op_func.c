@@ -7,7 +7,7 @@
  * @b: the second operand
  * Return: the result of the operation in integer
  */
-int (*get_op_func(char *s))(int, int)
+int (*get_op_func(char *s))()
 {
 	op_t ops[] = {
 		{"+", op_add},
