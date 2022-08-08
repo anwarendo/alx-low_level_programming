@@ -7,7 +7,7 @@
  * @b: the second operand
  * Return: the result of the operation in integer
  */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -20,14 +20,12 @@ int (*get_op_func(char *s))(int a, int b)
 	int i;
 
 	i = 0;
-/*
-	while (*s != ops[i][0] && ops[i][0] != NULL)
+	while (*s != *ops[i].op && ops[i].op != NULL)
 		i++;
-	if (ops[i][0] == NULL)
+	if (ops[i].op == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-*/
-	return (ops[i][1](a, b));
+	return (ops[i].f);
 }
