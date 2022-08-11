@@ -32,3 +32,8 @@ size_t count_nodes(const list_t *node);
 #define PRINT_LIST
 size_t print_list(const list_t *h);
 #endif /* PRINT_LIST */
+
+#ifndef LIST_LEN
+#define LIST_LEN
+size_t list_len(const list_t *h);
+#endif /* LIST_LEN */
