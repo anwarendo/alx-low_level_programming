@@ -7,6 +7,8 @@
  */
 size_t count_nodes(const list_t *node)
 {
+	if (node == NULL)
+		return (0);
 	if (node->next == NULL)
 		return (1);
 	else
