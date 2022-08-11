@@ -23,6 +23,11 @@ typedef struct list_s
 } list_t;
 #endif /* LIST_S */
 
+#ifndef COUNT_NODES
+#define COUNT_NODES
+size_t count_nodes(const list_t *node);
+#endif /* COUNT_NODES */
+
 #ifndef PRINT_LIST
 #define PRINT_LIST
 size_t print_list(const list_t *h);
