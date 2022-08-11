@@ -1,17 +1,12 @@
-#ifndef STDIO
-#define STDIO
-#include <stdio.h>
-#endif /* STDIO */
-
 #ifndef STDDEF
 #define STDDEF
 #include <stddef.h>
 #endif /* STDDEF */
 
-#ifndef STRING
-#define STRING
-#include <string.h>
-#endif /* STRING */
+#ifndef STDIO
+#define STDIO
+#include <stdio.h>
+#endif /* STDIO */
 
 #ifndef LIST_S
 #define LIST_S
