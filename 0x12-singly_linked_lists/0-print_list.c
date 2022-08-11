@@ -12,13 +12,14 @@ size_t count_nodes(const list_t *node)
 	else
 	{
 		if (node->str == NULL)
-			printf("[0] nil\n");
+			printf("[0] (nil)\n");
 		else
 			printf("[%u] %s\n", node->len, node->str);
 		printf("[%u] %s\n", node->next->len, node->next->str);
 		return (1 + count_nodes(node->next));
 	}
 }
+
 /**
  * print_list - prints all the elements of a list
  * @h: pointer for a list_t structure
