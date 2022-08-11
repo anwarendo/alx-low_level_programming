@@ -11,18 +11,15 @@ size_t count_nodes(const list_t *node)
 		return (0);
 	if (node->next == NULL)
 		return (1);
+	if (node->str == NULL)
+		printf("[0] (nil)\n");
 	else
-	{
-		if (node->str == NULL)
-			printf("[0] (nil)\n");
-		else
-			printf("[%u] %s\n", node->len, node->str);
-		if (node->next->str == NULL)
-			printf("[0] (nil)\n");
-		else
-			printf("[%u] %s\n", node->next->len, node->next->str);
-		return (1 + count_nodes(node->next));
-	}
+		printf("[%u] %s\n", node->len, node->str);
+	if (node->next->str == NULL)
+		printf("[0] (nil)\n");
+	else
+		printf("[%u] %s\n", node->next->len, node->next->str);
+	return (1 + count_nodes(node->next));
 }
 
 /**
