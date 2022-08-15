@@ -26,3 +26,8 @@ typedef struct listint_s
 #define PRINT_LISTINT
 size_t print_listint(const listint_t *h);
 #endif /* PRINT_LISTINT */
+
+#ifndef LISTINT_LEN
+#define LISTINT_LEN
+size_t listint_len(const listint_t *h);
+#endif /* LISTINT_LEN */
