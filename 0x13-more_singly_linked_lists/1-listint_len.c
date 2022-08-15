@@ -17,8 +17,8 @@ size_t count_nodes(const listint_t *node)
 
 /**
  * listint_len - prints all the elements of a list
- * @h: pointer for a list_t structure
- * Return: the number of nodes of type list_s structure
+ * @h: pointer for a listint_t structure
+ * Return: the number of nodes of type listint_s structure
  */
 size_t listint_len(const listint_t *h)
 {
