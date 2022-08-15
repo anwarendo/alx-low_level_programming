@@ -10,8 +10,11 @@ size_t count_nodes(const listint_t *node)
 	if (node == NULL)
 		return (0);
 	if (node->next == NULL)
+	{
+		printf("%d\n", 0);
 		return (1);
-	printf("%d\n%d\n", node->n, node->next->n);
+	}
+	printf("%d\n", node->n);
 	return (1 + count_nodes(node->next));
 }
 
