@@ -49,7 +49,9 @@ unsigned int binary_to_uint(const char *b)
 	for (j = n_bits; j >= 0; j--, i++)
 		if (b_array[j] == '1')
 			n += _pow(i);
-		else if (b_array[j] != '0')
+		else if (b_array[j] == '0')
+		        n += 0;
+		else
 			return (0);
 	return n;
 }
