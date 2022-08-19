@@ -52,6 +52,10 @@ unsigned int binary_to_uint(const char *b)
 		else if (b_array[j] == '0')
 		        n += 0;
 		else
+		{
+			free(b_array);
 			return (0);
+		}
+	free(b_array);
 	return n;
 }
