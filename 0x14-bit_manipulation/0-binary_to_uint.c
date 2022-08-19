@@ -9,7 +9,8 @@ unsigned int _pow(unsigned int n)
 {
 	if (n <= 0)
 		return (1);
-	return (2 * _pow(n - 1));
+	else
+		return (2 * _pow(n - 1));
 }
 
 /**
@@ -46,7 +47,8 @@ unsigned int binary_to_uint(const char *b)
 
 	n_bits = i - 1;
 	i = 0;
-	for (j = n_bits; j >= 0; j--, i++)
+	for (j = n_bits; j >= 0; j--)
+	{
 		if (b_array[j] == '1')
 			n += _pow(i);
 		else if (b_array[j] == '0')
@@ -56,6 +58,9 @@ unsigned int binary_to_uint(const char *b)
 			free(b_array);
 			return (0);
 		}
+
+		i++;
+	}
 	free(b_array);
 	return n;
 }
