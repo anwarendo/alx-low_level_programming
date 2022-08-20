@@ -23,6 +23,16 @@ unsigned int binary_to_uint(const char *b);
 void _putchar(char c);
 #endif /* _PUTCHAR */
 
+#ifndef BIT_INDEX
+#define BIT_INDEX
+unsigned int bit_index(unsigned long int n);
+#endif /* BIT_INDEX */
+
+#ifndef _PRINT_BITS
+#define _PRINT_BITS
+void _print_bits(int i, int m, unsigned long int n);
+#endif /* _PRINT_BITS */
+
 #ifndef PRINT_BINARY
 #define PRINT_BINARY
 void print_binary(unsigned long int n);

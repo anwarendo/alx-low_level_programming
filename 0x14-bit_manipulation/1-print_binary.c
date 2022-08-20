@@ -30,39 +30,37 @@ unsigned int bit_index(unsigned long int n)
 }
 
 /**
+ * _print_bits - prints the bits recursively
+ * @i: the bit shift counter
+ * @m: the number of bits counter
+ * @n: the original decimal number
+ * Return: nothing
+ */
+void _print_bits(int i, int m, unsigned long int n)
+{
+	if (m >= 0)
+	{
+		m--;
+		i++;
+
+		_print_bits(i, m, n);
+		_putchar((1&(n >> i)) + '0');
+	}
+	else
+		return;
+}
+
+/**
  * print_binary - prints the binary representation of a number
- * @n: the number in base 10
+ *dsatr65 @n: the number in base 10
  * Return: nothing
  */
 void print_binary(unsigned long int n)
 {
-	/* unsigned long int ref; */
-	unsigned long int x;
 	int m;
 	int i;
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-
-	if (n == 1)
-	{
-		_putchar('1');
-		return;
-	}
-
 	m = bit_index(n);
-	/* ref = (unsigned long int) _pow(m);*/
-	/* printf("%lu\n", ref); */
-	/* i should change this iteration into recursion to reverse the bits
-	   order */
-	for (i = 0; i <= m; i++)
-	{
-		x = n >> i;
-		/* printf("%lu  %lu, ", ref, x ); */
-		_putchar((1&x) + '0');
-	}
-
+	i = -1;
+        _print_bits(i, m, n);
 }
