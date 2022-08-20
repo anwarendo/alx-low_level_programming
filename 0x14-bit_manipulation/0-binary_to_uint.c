@@ -27,24 +27,15 @@ unsigned int binary_to_uint(const char *b)
 	char *b_array;
 
 	n = 0;
-	i = 0;
 	if (!b)
 		return (0);
-
-	while (b[i] != '\0')
-		i++;
-
+	for (i = 0; b[i] != '\0'; i++)
+		;
 	b_array = malloc(i);
 	if (!b_array)
 		return (0);
-
-	i = 0;
-	while (b[i] != '\0')
-	{
+	for (i = 0; b[i] != '\0'; i++)
 		b_array[i] = b[i];
-		i++;
-	}
-
 	n_bits = i - 1;
 	i = 0;
 	for (j = n_bits; j >= 0; j--)
@@ -52,15 +43,14 @@ unsigned int binary_to_uint(const char *b)
 		if (b_array[j] == '1')
 			n += _pow(i);
 		else if (b_array[j] == '0')
-		        n += 0;
+			n += 0;
 		else
 		{
 			free(b_array);
 			return (0);
 		}
-
 		i++;
 	}
 	free(b_array);
-	return n;
+	return (n);
 }
