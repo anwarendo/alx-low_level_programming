@@ -20,6 +20,7 @@ unsigned int _pow(unsigned int n)
 unsigned int bit_index(unsigned long int n)
 {
 	unsigned int m;
+
 	m = 0;
 	if (n <= 1)
 		return (0);
@@ -44,7 +45,7 @@ void _print_bits(int i, int m, unsigned long int n)
 		i++;
 
 		_print_bits(i, m, n);
-		_putchar((1&(n >> i)) + '0');
+		_putchar((1 & (n >> i)) + '0');
 	}
 	else
 		return;
@@ -52,7 +53,7 @@ void _print_bits(int i, int m, unsigned long int n)
 
 /**
  * print_binary - prints the binary representation of a number
- *dsatr65 @n: the number in base 10
+ * @n: the number in base 10
  * Return: nothing
  */
 void print_binary(unsigned long int n)
@@ -62,5 +63,5 @@ void print_binary(unsigned long int n)
 
 	m = bit_index(n);
 	i = -1;
-        _print_bits(i, m, n);
+	_print_bits(i, m, n);
 }
