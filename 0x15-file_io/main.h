@@ -1,9 +1,32 @@
+#ifndef STDLIB
+#define STDLIB
 #include <stdlib.h>
+#endif /* STDLIB */
+
+#ifndef TYPES
+#define TYPES
 #include <sys/types.h>
+#endif /* SYS/TYPES */
+
+#ifndef STAT
+#define STAT
 #include <sys/stat.h>
+#endif /* SYS/STAT */
+
+#ifndef FCNTL
+#define FCNTL
 #include <fcntl.h>
+#endif /* FCNTL */
+
+#ifndef UNISTD
+#define UNISTD
 #include <unistd.h>
+#endif /* UNISTD */
+
+#ifndef STDIO
+#define STDIO
 #include <stdio.h>
+#endif /* STDIO */
 
 #ifndef READ_TEXTFILE
 #define READ_TEXTFILE
