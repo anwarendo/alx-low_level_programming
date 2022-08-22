@@ -10,20 +10,22 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char *buf;
+	ssize_t n;
 
 	buf = malloc(letters);
 	if (!buf)
 		return (0);
 
-	fd = open(filename, O_CREAT | O_WRONLY, 0600);
+	fd = open(filename, O_CREAT | O_RDWR, 0600);
 	if (fd == -1)
 	{
 		printf("Failed to create and open the file.\n");
 		exit(1);
 	}
 
-	write(fd, buf, letters);
+	read(fd, buf, letters);
+	n = write(STDOUT_FILENO, buf, letters);
 	close(fd);
 
-	return (0);
+	return (n);
 }
