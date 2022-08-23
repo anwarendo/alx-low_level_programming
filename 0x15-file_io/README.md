@@ -1,4 +1,4 @@
-### Files & what they _do_?
+### Files & what they _do_:
 * _0-read_textfile.c_
   reads a text file and prints it to the standard output
 * _1-create_file.c_
