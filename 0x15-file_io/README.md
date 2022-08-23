@@ -5,5 +5,5 @@
   creates a file
 * _2-append_text_to_file.c_
   appends text at the end of a file
-* _3-cp.c_
+* __3-cp.c_ :
   copies the content of a file to another
