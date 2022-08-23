@@ -13,23 +13,24 @@ int create_file(const char *filename, char *text_content)
 	int i;
 	int size;
 
+	if (filename == NULL)
+		return (-1);
 	for (size = 0; text_content[size] != '\0'; size++)
 		;
 
 	text = malloc(size + 1);
 	if (!text)
 		return (-1);
-
 	for (i = 0; i < size; i++)
 		text[i] = text_content[i];
-
 	text[size] = '\0';
 
 	fd = open(filename, O_CREAT | O_WRONLY, 0600);
-
 	if (fd == -1)
 		return (-1);
 
+	if (text_content == NULL)
+		write(fd, "", 0);
 	write(fd, text, size);
 
 	close(fd);
