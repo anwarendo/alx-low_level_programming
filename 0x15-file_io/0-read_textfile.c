@@ -12,20 +12,25 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buf;
 	ssize_t n;
 
-	buf = malloc(letters);
+	buf = malloc(letters + 1);
 	if (!buf)
 		return (0);
 
-	fd = open(filename, O_CREAT | O_RDWR, 0600);
+	/* read */
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
-		printf("Failed to create and open the file.\n");
-		exit(1);
+		return (0);
 	}
 
-	read(fd, buf, letters);
-	n = write(STDOUT_FILENO, buf, letters);
+	n = read(fd, buf, letters);
+	if (n == -1)
+		return (0);
 	close(fd);
-	free(buf);
+
+	buf[n + 1] = '\0';
+
+	n = write(STDOUT_FILENO, buf, n);
+
 	return (n);
 }
