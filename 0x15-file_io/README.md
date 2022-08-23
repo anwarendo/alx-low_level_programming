@@ -1,9 +1,9 @@
 ### **files** & what they _do_?
-* 0-read_textfile.c
+* _0-read_textfile.c_
   reads a text file and prints it to the standard output
-* 1-create_file.c
+* _1-create_file.c_
   creates a file
-* 2-append_text_to_file.c
+* _2-append_text_to_file.c_
   appends text at the end of a file
-* 3-cp.c
+* _3-cp.c_
   copies the content of a file to another
